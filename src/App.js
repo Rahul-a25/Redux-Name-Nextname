@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import './App.css';
 import mystore from './store';
+import Output from './Output';
 
 function App() {
   
@@ -16,10 +17,13 @@ function App() {
   return (
     <div className="App">
       <div className="inputwala" >
-        
+      <Output/>
           <input onChange={(e)=>setState(e.target.value)} type="text"  />
           <button onClick={calldispatch}>Submit</button>
+         
+          
       </div>
+      
     </div>
   );
 }
