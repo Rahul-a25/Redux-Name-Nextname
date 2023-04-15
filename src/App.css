@@ -1,7 +1,30 @@
 .App {
   text-align: center;
 }
+.inputwala{
+  width: 400px;
+  padding: 100px;
+  box-shadow: 0px 0px 10px black;
+  margin: 100px auto;
+  display: flex;
 
+}
+.inputwala input{
+  width: 350px;
+  border-radius: 5px;
+  padding: 10px;
+  margin-right: 10px;
+}
+.inputwala button{
+  width: 100px;
+  padding: 10px;
+  font-size: 15px;
+  background-color: #46a6c1;
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

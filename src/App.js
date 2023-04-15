@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+
+import { useState } from 'react';
 import './App.css';
+import mystore from './store';
 
 function App() {
+  
+  const [state,setState]=useState("")
+  const calldispatch=()=>{
+    mystore.dispatch({
+      type:'name',
+      username: state,
+    });
+  };
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="inputwala" >
+        
+          <input onChange={(e)=>setState(e.target.value)} type="text"  />
+          <button onClick={calldispatch}>Submit</button>
+      </div>
     </div>
   );
 }
